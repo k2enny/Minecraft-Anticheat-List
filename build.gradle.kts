@@ -80,8 +80,12 @@ tasks.register("compileAnticheats") {
                     }
                     if (invalid) return@forEach
 
-                    if (obj.get("platforms") == JsonNull.INSTANCE) {
-                        obj.add("platforms", JsonArray().also { it.add("Unknown") })
+                    val platform = obj.get("platform")
+
+                    if (platform == null || platform == JsonNull.INSTANCE) {
+                        obj.add("platform", JsonArray().also { it.add("Unknown") })
+                    } else if (platform as? JsonPrimitive != null && platform.isString) {
+                        obj.add("platform", JsonArray().also { it.add(platform.asString) })
                     }
 
                     obj.addProperty("name", file.nameWithoutExtension)
