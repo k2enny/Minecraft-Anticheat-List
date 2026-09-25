@@ -1,0 +1,21 @@
+{
+  "platform": "Bukkit",
+  "status": "Active",
+  "versions": "1.8 - 1.21.11",
+  "spigot": null,
+  "github": null,
+  "price": "17€/m -> Small Server
+            29€/m -> Base Server
+            59€/m -> Large Server
+            Contact -> Enterprise",
+  "links": [
+    {
+      "name": "Dedicated Site",
+      "url": "https://ersa.ac"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg/ersaac"
+    }
+  ]
+}
